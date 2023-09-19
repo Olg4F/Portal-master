@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    font-family: 'Poppins';
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+:root {
+    --ciano: #45ffda;
+    --azul: #000d60;
+    --preto: #000000;
+    --azultransparente: #02204cc9;
+    --branco: #fcfcfc36;
+}
+
+/*estrutura*/
+html{
+    background-image: url(img/bg_white.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+nav {
+    font-size: 0.9rem;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.181);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/*navegação*/
+nav li {
+    display: inline-block;
+    width: 6rem;
+   
+}
+
+nav li a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 0.8rem;
+    height: 2.3rem;
+    width: 6.2rem;
+}
+
+nav li a:hover{
+    background-color: var(--azul);
+    color: white;
+    align-items: center;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.181);
+}
+
+
+.search-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+.drop{
+    position: absolute;
+    display: none;
+}
+
+.dropdown:hover .drop{
+    display: block;
+    width: 100px;
+    background-color: var(--branco);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+  
+.bi {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.bi-moon {
+    display: none;
+}
+  
+.icondark {
+    display: flex;
+    margin-left: 95%;
+    margin-top: 10px;
+    align-items: center;
+    position: fixed;
+}
+
+
+/*logos*/
+.logo{
+    filter: brightness(60%) contrast(150%);
+    margin-top: 9rem;
+    width: 6.5rem;
+    height: 6rem;
+}
+
+.logonavbar {
+    
+    margin-top: 2px;
+    margin-right: 40px;
+}
+
+/*containers de botões*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    margin-top: 50vh;
+}
+
+.container:nth-child(2n) {
+    margin-top: 62vh;
+}
+
+.botao{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: var(--branco);
+    overflow: hidden;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.181);
+    transition: all 0.3s ease-out;
+}
+
+.botao-drop:hover .drop-bt{
+    display: block;
+    position: fixed;
+    overflow: visible;
+    width: 180px;
+}
+
+.botao-drop:hover .botao-pai{
+    width: 180px;
+    transition: all 0.5s ease-out; 
+}
+
+.botao-drop:hover .botao-filho{
+    width: 180px;
+    transition: all 0.5s ease-out; 
+}
+
+
+.drop-bt {
+    display: none;
+    background-color: transparent;
+    margin-top: 0;
+    margin-left: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.botao span,
+.botao-pai span {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    padding: 25px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 17px;
+    transition: all 0.3s ease-out;
+}
+
+.botao-filho{
+    margin: 0.3rem;
+}
+
+.botao .icon,
+.botao-pai .icon{
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 5px;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.botao-filho span{
+    color: #000000;
+}
+
+.drop-bt .icon{
+    background-color: transparent;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.botao:hover {
+    width: 180px;
+    transition: all 0.3s ease-out;
+    background-color: white;
+}
+
+
+
+/* Dark theme */
+.dark,
+.dark html {
+    background-image: url(img/bg_black.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.dark .bi-sun {
+  display: none;
+}
+
+.dark .bi-moon {
+  display: block;
+  color: rgb(255, 255, 255);
+}
+ 
+.dark .titulo {
+    padding: 0px 0 380px 0;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.dark nav{
+    background-color: #36316385;
+}
+
+.dark nav li a {
+  color: rgb(255, 255, 255);
+}
+
+.dark .logo {
+    filter: none;
+}
+
+.dark .container .botao{
+    background-color: rgba(151, 151, 151, 0.122);
+}
+
+.dark .container .botao span{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+
+.dark .container .botao:hover{
+    background-color: var(--azul);
+}
+
+.dark .logonavbar {
+   filter: brightness(70%) contrast(190%);
+}
+
+.dark .botao-filho{
+    color: #000d60;
+}
